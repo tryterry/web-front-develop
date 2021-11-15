@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+        }
+
+        .container{
+            width: 930px;
+            height: 850px;
+            border: 1px solid gray;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        /* 헤더 시작 */
+        header {
+            border-bottom: 1px solid gray;
+        }
+        header .header-logo h1{
+            margin: 0px;
+            padding: 20px;
+            background-color: gray;
+        }
+        /* 헤더 끝 */
+
+        /* 메뉴 시작 */
+        nav {
+            float: left;
+            width: 200px;
+            height: 680px;
+            background-color: lightgray;
+            border-right: 1px solid gray;
+        }
+
+        nav .menu .menu-head h1{
+            font-size: 20px;
+            margin: 0px;
+            padding: 15px 5px 10px 10px;
+            border-bottom: 1px solid gray;
+        }
+
+        nav .menu .menu-list ul{
+            margin: 0px;
+            -webkit-padding-start:0px;
+            list-style:none;
+        }
+        nav .menu .menu-list li {
+            margin: 0px;
+            padding : 0px;
+            padding: 15px;
+            border-bottom: 1px solid gray;
+        }
+        /* 메뉴 끝 */
+
+        /* 본문 시작 */
+        article {
+            float: left;
+            width: 720px;
+            height: 680px;
+        }
+
+        article .content{
+            margin: 0px;
+        }
+
+        article .content .content-header{
+            margin: 10px;
+            border-bottom: 1px solid gray;
+        }
+
+        article .content .content-header .content-head{ 
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        article .content .content-header .content-info{
+            margin: 10px;
+        }
+
+        article .content .content-list{
+            width: 720px;
+            height: 490px;
+            padding: 15px;
+        }
+
+        article .content .content-list .content-item{
+            float: left;
+            display: inline;
+            width: 200px;
+            height: 200px;
+            margin: 15px;
+            background-color: gray;
+            align-content: center;
+            text-align: center;
+        }
+
+        article #item4{
+            background-color: tomato;
+            transition: 0.3s ease background-color;
+        }
+
+        article #item4:hover{
+            background-color: skyblue;
+        }
+
+        article #item5{
+            background-image: url('./cat.jpg');
+            background-position: center;
+            background-size: 100% 100%;
+            transition : 0.3s ease background-size;
+        }
+
+        article #item5:hover{
+            background-size: 120% 120%;
+            
+        }
+
+        article #item6{
+            background-image: url('./cat2.jpg');
+            background-size: cover;
+            transition: 0.3s ease all;
+
+        }
+    
+        article .content-list .content-item .bg{
+            color: white;
+            z-index: 1000;
+            position: relative;
+            width: 100%; height: 100%;
+            left: 0; top: 0;
+            background-color: rgba(0,0,0,0);
+            transition: 0.3s ease all;
+        }
+        
+        article .content-list .content-item .bg:hover{
+            background-color: rgba(0,0,0, 0.6);
+        }
+
+        article .content-list .content-item .bg:before{
+            content: '';
+            background-color: black;
+            z-index: 10000;
+        }
+        /* 본문 끝 */
+
+        /* footer 시작 */
+        footer {
+            clear: both;
+            border-top: 1px solid gray;
+            text-align: center;
+            padding: 20px;
+        }
+        /* footer 끝 */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-logo">
+                <h1>
+                    웹페이지
+                </h1>
+            </div>
+        </header>
+        <nav>
+            <div class="menu">
+                <div class="menu-head">
+                    <h1>메뉴</h1>
+                </div>
+                <div class="menu-list">
+                    <ul>
+                        <li>1. 사진 저장소</li>
+                        <li>2. 동영상 저장소</li>
+                        <li>3. 음악 저장소</li>
+                        <li>4. 문서</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <article>
+            <div class="content">
+                <div class="content-header">
+                    <div class="content-head">
+                        <h2>사진 저장소</h2>
+                    </div>
+                    <div class="content-info">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et commodi, repellendus iure vero nesciunt
+                            accusamus beatae
+                            obcaecati tempora recusandae earum saepe temporibus officiis sequi? Tempora vero deserunt obcaecati quisquam
+                            amet.
+                        </p>
+                    </div>
+                </div>
+                <div class="content-list">
+                    <div class="content-item" id="item1">
+                        <h1>item1</h1>
+                    </div>
+                    <div class="content-item" id="item2">
+                        <h1>item2</h1>
+                    </div>
+                    <div class="content-item" id="item3">
+                        <h1>item3</h1>
+                    </div>
+                    <div class="content-item" id="item4">
+                        <h1>item4</h1>
+                    </div>
+                    <div class="content-item" id="item5">
+                        <h1>Cat</h1>
+                    </div>
+                    <div class="content-item" id="item6">
+                        <div class="bg">Cat</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <footer>
+            copyleft
+        </footer>
+    </div>
+</body>
+
+</html>
