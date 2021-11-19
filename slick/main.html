@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick JS</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../fontello/css/fontello.css">
+    <link rel="stylesheet" href="../slick-1.8.1/slick/slick.css">
+    <!-- <link rel="stylesheet" href="../slick-1.8.1/slick/slick-theme.css"> -->
+    <script src="../slick-1.8.1/slick/slick.min.js"></script>
+    
+
+    <style>
+        
+        .visual{
+            position: relative;
+        }
+        .visual button{
+            position: absolute;
+            z-index: 999;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .visual button{
+            color: black;
+            width: 71px;
+            height: 71px;
+            border-radius: 100%;
+            background: rgba(0, 0, 0, .5);
+            border: none;
+            color: black;
+            background: white;
+            cursor:pointer;
+            line-height: 71px;
+            text-align:center;
+        }
+    
+        .visual button:before{
+            font-family: 'fontello';
+            font-size: 30px;
+            color: black;
+            text-align: center;
+        }
+
+        .visual button.slick-prev {
+            left:20px;
+            font-size: 0;
+            color: transparent;
+        }
+
+        .visual button.slick-prev:before{
+            content: "\e804";
+        }
+
+        .visual button.slick-next{
+            right:20px;
+            font-size: 0;
+            color: transparent;
+        }
+
+        .visual button.slick-next:before{
+            content: "\e805";
+            
+        }
+        .visual img{
+            width: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <section class="visual single-item">
+        <div><img src="./cat.jpg" alt=""></div>
+        <div><img src="./cat.jpg" alt=""></div>
+        <div><img src="./cat.jpg" alt=""></div>
+    </section>
+    <script src="./main.js"></script>
+
+</body>
+</html>
