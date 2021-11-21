@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout 4</title>
+</head>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{background: #fffde7;}
+        #wrap{width: 1200px; margin: 0 auto;}
+        header{width: 100%;height: 100px; background-color: #ffb74d;}
+        article{width: 100%; height:300px; background: #f57c00;}
+        section{overflow:hidden; width: 90%; padding: 5%; background: #ffa726;}
+        section>div{ width: 18%;float: left;height: 170px; background: #ffcc80;margin: 1%; border-radius: 15px;}
+        footer{width: 100%;height: 100px; background: #fb8c00;}
+
+        @media (max-width:1240px) {
+            #wrap{width: 100%;}
+            section>div{width: 23%;}
+            section>div:nth-child(5n){display: none;}
+        }
+
+        @media (max-width:768px) {
+            section>div{width: 31%;}
+            section>div:nth-child(5){display: block;}
+        }
+
+        @media (max-width:500px) {
+            section>div{width: 48%;}
+            section>div:nth-child(5n){display: block;}
+        }
+
+    </style>
+<body>
+    <div id="wrap">
+        <header>
+            <p>header</p>
+        </header>
+        <article>
+            <p>article</p>
+        </article>
+        <section>
+            <p>section</p>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+</body>
+</html>
