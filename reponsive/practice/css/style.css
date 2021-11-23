@@ -1,9 +1,14 @@
 /* 레이아웃  */
-
-#header{background: url('../img/header_bg.jpg') repeat-x center top;}
+body{background: url('../img/header_bg.jpg') repeat-x center top;}
+#header{}
 #nav{background-color: #f6fdff;}
+#title{background-color: #eaf7fd;}
+
+
 /* 컨테이너 */
 .container{width: 1200px; margin: 0 auto; background:rgba(0, 0, 0, 0.0);}
+
+
 /* 헤더 */
 .header{height: 327px;}
 .header .header_menu{text-align: right;}
@@ -92,8 +97,9 @@
         0 0 0 100px rgba(0, 0, 0, 0.1) inset;
 }
 
+
 /* 전체 메뉴 */
-.nav{overflow: hidden; padding: 25px 0;}
+.nav{overflow: hidden; padding: 25px 0; display: none;}
 .nav>div{float: left; width: 40%;}
 .nav>div:last-child{width: 20%;}
 .nav>div ol{overflow: hidden;}
@@ -107,15 +113,87 @@
     background-color: #25a2d0; 
     border-radius: 50%; 
     position:absolute;
-    left: 0; top: 6px;
+    left: 0; top: 9px;
+}
+.nav>div li a{position: relative;}
+.nav>div li a:after{
+    content: '';
+    display: inline-block;
+    width: 0; height: 1px;
+    background: #25aad0;
+    transition: all 0.2s ease-out;
+    position: absolute; bottom: 0; left: 0;
+}
+.nav>div li:hover a:after{width: 100%;}
+
+
+/* 타이틀 */
+.title {position: relative; text-align: center;}
+.title h2 {font-family: 'Nanum Brush Script', cursive; font-size: 39px; color: #0093db;
+    padding: 5px 0;}
+.title .btn{
+    position: absolute; right: 0; top: 5px;
+    width: 60px;height: 60px;
+    line-height: 60px;
+    background: #3192bf; color: #fff;
+    font-size: 35px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.title .btn:hover{
+    box-shadow: 
+        0 0 0 3px rgba(71, 154,191, 0.9) inset,
+        0 0 0 100px rgba(0, 0, 0, 0.1) inset;
 }
 
 
-
-
 /* mediaquery */
+/* 화면 너비 0 ~ 1220px */
 @media (max-width:1220px) {
     .container{width: 100%;}
     .row{padding: 0 15px;}
-    
+    .title .btn{right: 5px;}
+}
+
+/* 화면 너비 0 ~ 1024px */
+@media (max-width:1024px) {
+
+}
+
+/* 화면 너비 0 ~ 960px */
+@media (max-width:960px) {
+    .nav>div{float:none; width: 100%;}
+    .nav>div:last-child{width: 100%;}
+    .nav>div li {width: 33.3333%;}
+    .nav>div:last-child li{width: 33.3333%;}
+    .nav>div ol{margin-bottom: 10px;}
+}
+
+/* 화면 너비 0 ~ 768px */
+@media (max-width:768px) {
+
+}
+
+/* 화면 너비 0 ~ 600px */
+@media (max-width:600px) {
+    .header{height: auto;}
+    .header .header_tit{display: none;}
+    .header .header_icon{display: none;}
+    .title .btn{display: none;}
+
+    .nav>div li {width: 50%;}
+    .nav>div:last-child li{width: 50%;}
+}
+
+
+/* 화면 너비 0 ~ 480px */
+@media (max-width:480px) {
+
+}
+
+
+/* 화면 너비 0 ~ 320px */
+@media (max-width:320px) {
+    .nav>div li {width: 100%;}
+    .nav>div:last-child li{width: 100%;}
 }
