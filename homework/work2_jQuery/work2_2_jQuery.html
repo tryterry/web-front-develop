@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        .selected_opt{margin: 10px;}
+        .selected_opt>*{margin: 3px;}
+    </style>
+</head>
+<body>
+    <select name="옵션 선택" id="optionSelect">
+        <option value="">옵션선택</option>
+        <option class="opt1" value="10000">옵션1(10,000)</option>
+        <option class="opt2" value="20000">옵션2(20,000)</option>
+        <option class="opt3" value="30000">옵션3(30,000)</option>
+    </select>
+    
+    <div class="total">
+        <span>총</span>
+        <span>0</span>원
+    </div>
+    <script>
+        $(function(){
+
+            $('#optionSelect').on('change',function(){ 
+            
+                // 옵션 선택 시
+                if(!$('#optionSelect option:selected').hasClass('selected')&& ($('#optionSelect option:selected').val()!='')){
+                    var select = $('#optionSelect option:selected').text().split('(')[0];
+                    var price = $('#optionSelect option:selected').val()
+
+                    // console.log(select)
+                    // console.log(price)
+                    
+                    // 옵션 추가
+                    var opt = $('<div>',{class:'selected_opt'});
+                    var opt_num = $('<span>',{text: select});
+                    var opt_price = $('<span>',{class: 'price', text: price});
+                    var opt_won = $('<span>',{text: '원'});
+                    var opt_qnt = $('<input>',{class: 'quantity', type:'text', readonly:true, value: 1});
+                    var opt_plus = $('<input>',{class: 'plus', type:'button', value:'+'})
+                    var opt_minus = $('<input>',{class: 'minus', type:'button', value:'-'})
+                    var opt_dlt = $('<input>',{class:'delete', type:'button', value:'삭제'})
+                    
+                    opt.append(
+                        opt_num,
+                        opt_price,
+                        opt_won,
+                        opt_qnt,
+                        opt_plus,
+                        opt_minus,
+                        opt_dlt
+                        );
+
+                    opt.insertBefore('.total')                                    
+                }
+
+                // 선택 된 옵션 표시
+                $('#optionSelect option:selected').addClass('selected')
+
+                sum()
+            })
+
+            // + 버튼 클릭 시
+            $('.selected_opt.plus').on('click',function(){
+                console.log('gg')
+            })
+
+            // - 버튼 클릭 시
+            $('input.minus').on('click',function(){
+                    var parent = $(this).parent().find('')
+                    console.log(parent)
+            })
+
+            // 삭제 버튼 클릭 시
+            $('input.delete').on('click',function(){
+                    var parent = $(this).parent().find('')
+                    console.log(parent)
+            })
+
+            // 총합 계산
+            function sum(){
+                var priceList = $('.price').get()
+                var qntList = $('.quantity').get()
+
+                var sum = 0;
+                for (let i = 0; i < priceList.length; i++) {
+
+                    sum += parseInt(priceList[i].textContent) * parseInt(qntList[i].value)     
+                }
+                console.log(sum)
+            }
+
+        })
+    </script>
+</body>
+</html>

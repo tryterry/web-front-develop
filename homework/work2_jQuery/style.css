@@ -1,0 +1,24 @@
+#header{background: rgb(225, 248, 97);}
+#contents{background: rgb(225, 200, 97);}
+
+.container{width: 1200px; margin: 0 auto; background: rgba(0, 0, 0, 0);}
+
+/* 헤더 부분 */
+.header{height: 80px; text-align: center; line-height: 80px;}
+.header h2{font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight:bold; font-size: 40px;}
+
+
+/* 컨텐츠 부분 */
+.contents{overflow:hidden; width:900px; margin: 0 auto; padding: 10px;}
+.contents .cont_img{float: left;}
+.contents .cont_info{text-align: right;}
+.contents .cont_info .cont_name{font-size: 20px; font-weight: bold;}
+.contents .cont_info .cont_price{font-size: 25px; font-weight: 900;}
+.contents .cont_option{}
+.contents .cont_option ul>li{
+    width: 150px;
+}
+
+@media (max-width:1220px){
+    .container{width: 100%;}
+}
