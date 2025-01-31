@@ -14,14 +14,14 @@
 
 ~~~
 📦 web-front-develop
-┣ 📂 fontello          # 폰트 및 아이콘 저장 폴더
-┣ 📂 full-page          # fullPage 라이브러리 연습 폴더
-┣ 📂 fullPage.js-2.9.7          # fullPage 라이브러리 package
-┣ 📂 homework          # html, css 연습 폴더
-┣ 📂 reponsive          # 반응형 웹 연습 폴더
-┣ 📂 slick-1.8.1          # slick 라이브러리 package
-┣ 📂 slick          # slick 라이브러리 연습 폴더
-┣ 📜 README.md   # 레포지토리 소개
+┣ 📂 fontello            # 폰트 및 아이콘 저장 폴더
+┣ 📂 full-page           # fullPage 라이브러리 연습 폴더
+┣ 📂 fullPage.js-2.9.7   # fullPage 라이브러리 package
+┣ 📂 homework            # html, css 연습 폴더
+┣ 📂 reponsive           # 반응형 웹 연습 폴더
+┣ 📂 slick-1.8.1         # slick 라이브러리 package
+┣ 📂 slick               # slick 라이브러리 연습 폴더
+┣ 📜 README.md           # 레포지토리 소개
 ~~~
 
 ## 🎱 실행 방법
